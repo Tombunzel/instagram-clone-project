@@ -258,3 +258,17 @@ div.highlights-item-text span {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+div.gallery-tab-list {
+    font-weight: 600;
+    color: #a8a8a8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a.tab-anchor {
+    color: #a8a8a8;
+    width: 100%;
+    text-align: center;
+}
