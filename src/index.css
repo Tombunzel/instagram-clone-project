@@ -1,0 +1,242 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    background-color: black;
+    color: #f5f5f5;
+}
+
+header.profile-page-header {
+    background-color: black;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+svg.header-settings-icon {
+    color: #f5f5f5;
+}
+
+div.header-user {
+    display: flex;
+    color: #f5f5f5;
+}
+
+div.header-user-arrow-icon {
+    transform: rotate(180deg);
+    padding-right: 4px;
+    color: #f5f5f5;
+}
+
+svg.header-threads-icon {
+    color: #f5f5f5;
+}
+
+div.profile-header {
+    margin-top: 55.5px;
+    font-weight: 550;
+    display: flex;
+    flex-direction: column;
+}
+
+div.profile-picture-container {
+    width: 77px;
+    height: 77px;
+    overflow: hidden;
+    border-radius: 50%;
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+img.profile-picture {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+div.profile-stats {
+    padding: 0 10px;
+    display: flex;
+    gap: 30px;
+}
+
+div.profile-info {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.profile-counts {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+div.profile-stats p {
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+
+div.profile-stats p.stat-name {
+    font-weight: 200;
+}
+
+div.profile-bio {
+    padding: 0px 10px;
+}
+
+p.bio-text {
+    margin-bottom: 0;
+}
+
+a.profile-mention-tag {
+    color: #e0f0ff;
+    text-decoration: none;
+}
+
+div.bio-link-container {
+    padding: 0;
+}
+
+a.bio-link {
+    color: #e0f0ff;
+    text-decoration: none;
+}
+
+span.bio-link-icon-span {
+    margin-top: auto;
+    position: relative;
+}
+
+svg.link-icon {
+    vertical-align: bottom;
+}
+
+div.profile-actions {
+    margin: 5px;
+    gap: 5px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.edit-profile-div {
+    flex-grow: 1;
+    height: 20px;
+}
+
+div.share-profile-div {
+    flex-grow: 1;
+    height: 20px;
+}
+
+a.edit-profile-button {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 12px;
+    background-color: #363636;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+a.share-profile-button {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 12px;
+    background-color: #363636;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+section.highlights-bar {
+    display: flex;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+ul.highlights-list {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+li.highlights-item {
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.highlights-item-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #363636; /* Outer gray border */
+    outline: 1px solid black; /* Inner black border */
+    outline-offset: -2px; /* Pull the outline inward */
+    flex-shrink: 0;
+}
+
+div.highlights-item-image-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.highlights-item-image {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+div.highlights-item-text {
+    text-align: center;
+    width: 60px;
+    #f5f5f5-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16px;
+}
