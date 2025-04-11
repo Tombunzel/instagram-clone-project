@@ -340,6 +340,10 @@ body {
     align-items: center;
 }
 
+.footer__tab--desktop-only {
+    display: none;
+}
+
 .footer__profile-container {
     width: 28px;
     height: 28px;
@@ -359,14 +363,33 @@ body {
     object-position: center;
 }
 
-@media only screen (min-width: 768px) {
+@media (min-width: 768px) {
     body {
-        padding: 46px 0 0 44px;
+        padding-top: 20px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .profile {
+        padding: 0 0 0 72px;
     }
 
     .footer {
         width: 72px;
-        height: calc(100vh - 46px);
-        top: 46px;
+        height: calc(100vh);
+        bottom: 0;
+        left: 0;
+        right: auto;
+        flex-direction: column;
+    }
+
+    .footer__edge-tab {
+        height: 92px;
+    }
+
+    .footer__tab--desktop-only {
+        display: flex;
     }
 }
