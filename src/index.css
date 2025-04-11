@@ -44,6 +44,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 32px;
 }
 
 .header__username {
@@ -203,14 +204,17 @@ body {
 .highlights__container {
     display: flex;
     width: 100%;
+    min-width: 100vw;
 }
 
 .highlights__list {
     display: flex;
+    gap: 4vw;
     padding: 0;
     list-style-type: none;
     flex-wrap: nowrap; /* Prevent wrapping */
     width: max-content; /* Allow list to expand */
+    min-width: 100vw;
 }
 
 .highlights__list-item {
@@ -353,4 +357,16 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+@media only screen (min-width: 768px) {
+    body {
+        padding: 46px 0 0 44px;
+    }
+
+    .footer {
+        width: 72px;
+        height: calc(100vh - 46px);
+        top: 46px;
+    }
 }
