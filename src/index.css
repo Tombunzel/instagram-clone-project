@@ -7,7 +7,7 @@ body {
     font-size: 12px;
     background-color: black;
     color: #f5f5f5;
-    padding: 0;
+    padding: 44px 0 48px 0;
     margin: 0;
 }
 
@@ -16,7 +16,7 @@ body {
     color: #f5f5f5;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
@@ -30,7 +30,8 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 10;
+    height: 44px;
 }
 
 .header__settings-icon {
@@ -40,6 +41,15 @@ body {
 .header__user {
     display: flex;
     color: #f5f5f5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header__username {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header__arrow {
@@ -53,7 +63,8 @@ body {
 }
 
 .profile {
-    margin-top: 55.5px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: 550;
     display: flex;
     flex-direction: column;
@@ -318,6 +329,7 @@ body {
 
 .footer__tab {
     text-align: center;
+    padding: 12px;
     width: 100%;
     display: flex;
     justify-content: center;
