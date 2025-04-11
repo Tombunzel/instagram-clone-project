@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-header.profile-page-header {
+.header {
     background-color: black;
     color: #f5f5f5;
     display: flex;
@@ -33,33 +33,40 @@ header.profile-page-header {
     z-index: 1;
 }
 
-svg.header-settings-icon {
+.header__settings-icon {
     color: #f5f5f5;
 }
 
-div.header-user {
+.header__user {
     display: flex;
     color: #f5f5f5;
 }
 
-div.header-user-arrow-icon {
+.header__arrow {
     transform: rotate(180deg);
     padding-right: 4px;
     color: #f5f5f5;
 }
 
-svg.header-threads-icon {
+.header__threads-icon {
     color: #f5f5f5;
 }
 
-div.profile-header {
+.profile {
     margin-top: 55.5px;
     font-weight: 550;
     display: flex;
     flex-direction: column;
 }
 
-div.profile-picture-container {
+.profile__stats {
+    padding: 0 3vw;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.profile__picture-container {
     width: 77px;
     height: 77px;
     overflow: hidden;
@@ -68,7 +75,7 @@ div.profile-picture-container {
     flex-shrink: 0;
 }
 
-img.profile-picture {
+.profile__picture {
     display: inline;
     margin: 0 auto;
     height: 100%;
@@ -77,93 +84,92 @@ img.profile-picture {
     object-position: center;
 }
 
-div.profile-stats {
-    padding: 0 10px;
+.profile__info {
+    padding: 0 4vw;
     display: flex;
-    gap: 30px;
-}
-
-div.profile-info {
-    padding: 14px;
     flex: 1;
-    display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-div.profile-counts {
+.profile__stats-container {
+}
+
+.profile__counts {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 2vw;
     margin-top: 10px;
     width: 100%;
     justify-content: space-between;
 }
 
-div.profile-stats p {
+.profile__stats-paragraph {
+    text-wrap: wrap;
     margin-bottom: 4px;
     margin-top: 0;
 }
 
-div.profile-stats p.stat-name {
+.profile__stat {
     font-weight: 200;
 }
 
-div.profile-bio {
+.bio {
     padding: 0px 10px;
 }
 
-p.bio-text {
+.bio__text {
     margin-bottom: 0;
 }
 
-a.profile-mention-tag {
+.bio__mention-tag {
     color: #e0f0ff;
     text-decoration: none;
 }
 
-div.bio-link-container {
+.bio__link-container {
     padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-a.bio-link {
+.bio__link {
     color: #e0f0ff;
     text-decoration: none;
+    white-space: nowrap;
 }
 
-span.bio-link-icon-span {
+.bio__link-icon-container {
     margin-top: auto;
     position: relative;
 }
 
-svg.link-icon {
+.bio__link-icon {
     vertical-align: bottom;
 }
 
-div.profile-actions {
-    margin: 5px;
-    gap: 5px;
+.profile__actions {
+    padding: 5px 10px;
+    gap: calc(10% * 100vh);
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 32px;
     justify-content: space-around;
     align-items: center;
 }
 
-div.edit-profile-div {
+.profile__button-container {
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
-    height: 20px;
+    height: 100%;
 }
 
-div.share-profile-div {
-    flex-grow: 1;
-    height: 20px;
-}
-
-a.edit-profile-button {
+.profile__button {
     text-decoration: none;
     color: #f5f5f5;
-    font-size: 12px;
+    font-size: 3ev;
     background-color: #363636;
     border-radius: 5px;
     border: none;
@@ -171,24 +177,10 @@ a.edit-profile-button {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 90%;
 }
 
-a.share-profile-button {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 12px;
-    background-color: #363636;
-    border-radius: 5px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-section.highlights-bar {
+.highlights {
     display: flex;
     overflow-y: hidden;
     overflow-x: auto;
@@ -197,12 +189,12 @@ section.highlights-bar {
     width: 100%;
 }
 
-.highlights-container {
+.highlights__container {
     display: flex;
     width: 100%;
 }
 
-ul.highlights-list {
+.highlights__list {
     display: flex;
     padding: 0;
     list-style-type: none;
@@ -210,14 +202,14 @@ ul.highlights-list {
     width: max-content; /* Allow list to expand */
 }
 
-li.highlights-item {
+.highlights__list-item {
     width: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-div.highlights-item-image-container {
+.highlights__image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +223,7 @@ div.highlights-item-image-container {
     flex-shrink: 0;
 }
 
-div.highlights-item-image-container a {
+.highlights__image-link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -239,7 +231,7 @@ div.highlights-item-image-container a {
     align-items: center;
 }
 
-img.highlights-item-image {
+.highlights__image {
     display: inline;
     margin: 0 auto;
     height: 100%;
@@ -248,7 +240,7 @@ img.highlights-item-image {
     object-position: center;
 }
 
-div.highlights-item-text {
+.highlights__caption {
     text-align: center;
     width: 65px;
     max-width: 65px;
@@ -261,7 +253,7 @@ div.highlights-item-text {
     box-sizing: border-box;
 }
 
-div.highlights-item-text span {
+.highlights__caption-text {
     white-space: nowrap;
     display: block;
     width: 100%;
@@ -269,7 +261,7 @@ div.highlights-item-text span {
     text-overflow: ellipsis;
 }
 
-div.gallery-tab-list {
+.gallery__tabs {
     font-weight: 600;
     color: #a8a8a8;
     display: flex;
@@ -277,13 +269,13 @@ div.gallery-tab-list {
     align-items: center;
 }
 
-a.gallery-tab-anchor {
+.gallery__tab-link {
     color: #a8a8a8;
     width: 100%;
     text-align: center;
 }
 
-div.gallery-grid {
+.gallery__grid {
     display: grid;
     justify-content: space-between;
     justify-items: stretch;
@@ -292,24 +284,24 @@ div.gallery-grid {
     box-sizing: border-box;
 }
 
-div.gallery-row {
+.gallery__row {
     display: flex;
     width: 100%;
 }
 
-div.gallery-image-container {
+.gallery__image-container {
     width: calc(100% / 3);
     padding: 1px;
 }
 
-div.gallery-row img {
+.gallery__image {
     aspect-ratio: 0.75;
     width: 100%;
     object-fit: cover;
     display: block;
 }
 
-footer.nav-footer {
+.footer {
     background-color: black;
     display: flex;
     justify-content: space-evenly;
@@ -324,7 +316,7 @@ footer.nav-footer {
     bottom: 0;
 }
 
-div.footer-tab-item {
+.footer__tab {
     text-align: center;
     width: 100%;
     display: flex;
@@ -332,7 +324,7 @@ div.footer-tab-item {
     align-items: center;
 }
 
-div.footer-profile-picture-container {
+.footer__profile-container {
     width: 28px;
     height: 28px;
     overflow: hidden;
@@ -342,7 +334,7 @@ div.footer-profile-picture-container {
     flex-shrink: 0;
 }
 
-img.footer-profile-picture {
+.footer__profile-picture {
     display: inline;
     margin: 0 auto;
     height: 100%;

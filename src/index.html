@@ -7,15 +7,15 @@
         <title>Instagram Clone Project</title>
     </head>
     <body>
-        <header class="profile-page-header">
-            <div class="header-settings">
+        <header class="header">
+            <div class="header__settings">
                 <a
-                    class="header-settings-anchor"
+                    class="header__settings-link"
                     href="/accounts/settings/?entrypoint=profile"
                 >
                     <svg
                         aria-label="Options"
-                        class="header-settings-icon"
+                        class="header__settings-icon"
                         fill="currentColor"
                         height="24"
                         role="img"
@@ -43,12 +43,12 @@
                     </svg>
                 </a>
             </div>
-            <div class="header-user">
-                <div class="header-username">tombunzel</div>
-                <div class="header-user-arrow-icon">
+            <div class="header__user">
+                <div class="header__username">tombunzel</div>
+                <div class="header__arrow">
                     <svg
                         aria-label="Down Chevron Icon"
-                        class="user-arrow-icon"
+                        class="header__arrow-icon"
                         fill="currentColor"
                         height="12"
                         role="img"
@@ -62,14 +62,14 @@
                     </svg>
                 </div>
             </div>
-            <div class="header-threads">
+            <div class="header__threads">
                 <a
-                    class="header-threads-anchor"
+                    class="header__threads-link"
                     href="https://www.threads.net/?xmt=AQGzw1I3QnKqigkAjZO2arq2jdw5x2WtIWMbJdHQa4hILjc"
                 >
                     <svg
                         aria-label=""
-                        class="header-threads-icon"
+                        class="header__threads-icon"
                         fill="currentColor"
                         height="24"
                         role="img"
@@ -85,46 +85,58 @@
                 </a>
             </div>
         </header>
-        <div class="profile-header">
-            <div class="profile-stats">
-                <div class="profile-picture-container">
+        <div class="profile">
+            <div class="profile__stats">
+                <div class="profile__picture-container">
                     <img
-                        class="profile-picture"
+                        class="profile__picture"
                         src="/assets/images/user-profile-picture.jpg"
                     />
                 </div>
-                <div class="profile-info">
-                    <div class="profile-name">Tom Bunzel</div>
-                    <div class="profile-counts">
-                        <div class="profile-posts">
-                            <p class="number">120</p>
-                            <p class="stat-name">posts</p>
+                <div class="profile__info">
+                    <div class="profile__name">Tom Bunzel</div>
+                    <div class="profile__counts">
+                        <div class="profile__stats-container">
+                            <p class="profile__stats-paragraph profile__count">
+                                120
+                            </p>
+                            <p class="profile__stats-paragraph profile__stat">
+                                posts
+                            </p>
                         </div>
-                        <div class="profile-followers">
-                            <p class="number">870</p>
-                            <p class="stat-name">followers</p>
+                        <div class="profile__stats-container">
+                            <p class="profile__stats-paragraph profile__count">
+                                870
+                            </p>
+                            <p class="profile__stats-paragraph profile__stat">
+                                followers
+                            </p>
                         </div>
-                        <div class="profile-following">
-                            <p class="number">546</p>
-                            <p class="stat-name">following</p>
+                        <div class="profile__stats-container">
+                            <p class="profile__stats-paragraph profile__count">
+                                546
+                            </p>
+                            <p class="profile__stats-paragraph profile__stat">
+                                following
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="profile-bio">
-                <p class="bio-text">
+            <div class="bio">
+                <p class="bio__text">
                     OUT NOW:<br />
                     My live session at
-                    <a class="profile-mention-tag" href="/mimikry.me/"
+                    <a class="bio__mention-tag" href="/mimikry.me/"
                         >@mimikry.me</a
                     >
                 </p>
-                <div class="bio-link-container">
-                    <a class="bio-link" href="youtu.be/3o5ifPbL0WQ">
-                        <span class="bio-link-icon-span">
+                <div class="bio__link-container">
+                    <a class="bio__link" href="youtu.be/3o5ifPbL0WQ">
+                        <span class="bio__link-icon-container">
                             <svg
                                 aria-label="Link icon"
-                                class="link-icon"
+                                class="bio__link-icon"
                                 fill="currentColor"
                                 height="12"
                                 role="img"
@@ -157,152 +169,172 @@
                     </a>
                 </div>
             </div>
-            <div class="profile-actions">
-                <div class="edit-profile-div">
-                    <a class="edit-profile-button">Edit profile</a>
+            <div class="profile__actions">
+                <div class="profile__button-container">
+                    <a class="profile__button">Edit profile</a>
                 </div>
-                <div class="share-profile-div">
-                    <a class="share-profile-button">Share profile</a>
+                <div class="profile__button-container">
+                    <a class="profile__button">Share profile</a>
                 </div>
             </div>
-            <section class="highlights-bar">
-                <div class="highlights-container">
-                    <ul class="highlights-list">
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a href="">
+            <section class="highlights">
+                <div class="highlights__container">
+                    <ul class="highlights__list">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/friends-o-music-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>friends o music</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >friends o music</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/my-concerts-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>my concerts</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >my concerts</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/deguy-highlight-image.jpeg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>DEGUY</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >DEGUY</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/live-shows-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>live shows</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >live shows</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/true-bliss-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>true bliss</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >true bliss</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/karo-lynn-highlight-image.jpeg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>Karo Lynn</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >Karo Lynn</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/from-the-studio-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>from the studio</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >from the studio</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/playaplaya-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>Playaplaya</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >Playaplaya</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/swiss-cabin-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>swiss cabin</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >swiss cabin</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
-                                <a class="highlights-item-anchor" href="">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
+                                <a class="highlights__image-link" href="">
                                     <img
-                                        class="highlights-item-image"
+                                        class="highlights__image"
                                         src="/assets/images/swiss-christmas-highlight-image.jpg"
                                     />
                                 </a>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>swiss christmas</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >swiss christmas</span
+                                >
                             </div>
                         </li>
-                        <li class="highlights-item">
-                            <div class="highlights-item-image-container">
+                        <li class="highlights__list-item">
+                            <div class="highlights__image-container">
                                 <svg
                                     aria-label="Plus icon"
-                                    class="x1lliihq x1n2onr6 x10xgr34"
+                                    class="highlights__plus-icon"
                                     fill="#737373"
                                     height="30"
                                     role="img"
@@ -315,23 +347,25 @@
                                     ></path>
                                 </svg>
                             </div>
-                            <div class="highlights-item-text">
-                                <span>New</span>
+                            <div class="highlights__caption">
+                                <span class="highlights__caption-text"
+                                    >New</span
+                                >
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
         </div>
-        <div class="gallery-tab-list">
+        <div class="gallery__tabs">
             <a
                 aria-selected="true"
-                class="gallery-tab-anchor"
+                class="gallery__tab-link"
                 href="/tombunzel/"
             >
                 <svg
                     aria-label="Posts"
-                    class="gallery-tab-icon"
+                    class="gallery__tab-icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -398,12 +432,12 @@
             </a>
             <a
                 aria-selected="false"
-                class="gallery-tab-anchor"
+                class="gallery__tab-link"
                 href="/tombunzel/reels"
             >
                 <svg
                     aria-label="Reels"
-                    class="allery-tab-icon"
+                    class="gallery__tab-icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -459,12 +493,12 @@
             </a>
             <a
                 aria-selected="false"
-                class="gallery-tab-anchor"
+                class="gallery__tab-link"
                 href="/tombunzel/tagged"
             >
                 <svg
                     aria-label="Tagged"
-                    class="gallery-tab-icon"
+                    class="gallery__tab-icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -501,53 +535,53 @@
                 </svg>
             </a>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-row">
-                <div class="gallery-image-container">
+        <div class="gallery__grid">
+            <div class="gallery__row">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-1-gallery.jpeg"
                     />
                 </div>
-                <div class="gallery-image-container">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-2-gallery.jpg"
                     />
                 </div>
-                <div class="gallery-image-container">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-3-gallery.jpeg"
                     />
                 </div>
             </div>
-            <div class="gallery-row">
-                <div class="gallery-image-container">
+            <div class="gallery__row">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-4-gallery.jpg"
                     />
                 </div>
-                <div class="gallery-image-container">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-5-gallery.jpeg"
                     />
                 </div>
-                <div class="gallery-image-container">
+                <div class="gallery__image-container">
                     <img
-                        class="gallery-image"
+                        class="gallery__image"
                         src="/assets/images/post-6-gallery.jpeg"
                     />
                 </div>
             </div>
         </div>
-        <footer class="nav-footer">
-            <div class="footer-tab-item">
+        <footer class="footer">
+            <div class="footer__tab">
                 <svg
                     aria-label="Home"
-                    class="footer-tab-icon"
+                    class="footer__icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -564,10 +598,10 @@
                     ></path>
                 </svg>
             </div>
-            <div class="footer-tab-item">
+            <div class="footer__tab">
                 <svg
                     aria-label="Explore"
-                    class="footer-tab-icon"
+                    class="footer__icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -599,10 +633,10 @@
                     ></circle>
                 </svg>
             </div>
-            <div class="footer-tab-item">
+            <div class="footer__tab">
                 <svg
                     aria-label="New post"
-                    class="footer-tab-icon"
+                    class="footer__icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -642,10 +676,10 @@
                     ></line>
                 </svg>
             </div>
-            <div class="footer-tab-item">
+            <div class="footer__tab">
                 <svg
                     aria-label="Reels"
-                    class="footer-tab-icon"
+                    class="footer__icon"
                     fill="currentColor"
                     height="24"
                     role="img"
@@ -699,10 +733,10 @@
                     ></path>
                 </svg>
             </div>
-            <div class="footer-tab-item">
-                <div class="footer-profile-picture-container">
+            <div class="footer__tab">
+                <div class="footer__profile-container">
                     <img
-                        class="footer-profile-picture"
+                        class="footer__profile-picture"
                         src="/assets/images/user-profile-picture.jpg"
                     />
                 </div>
