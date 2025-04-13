@@ -152,6 +152,7 @@ body {
     color: #e0f0ff;
     text-decoration: none;
     white-space: nowrap;
+    font-weight: bold;
 }
 
 .bio__link-icon-container {
@@ -399,6 +400,7 @@ body {
 
     .profile {
         margin-left: 72px;
+        line-height: 18px;
     }
 
     .profile__picture-container {
@@ -462,5 +464,52 @@ body {
 
     .footer__tab--desktop-only {
         display: flex;
+    }
+}
+
+@media (min-width: 1265px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile__info {
+        order: 2;
+    }
+
+    .profile__stats {
+        order: 1;
+    }
+
+    .bio {
+        order: 3;
+    }
+
+    .profile__actions {
+        order: 4;
+    }
+
+    .highlights {
+        order: 5;
+    }
+
+    .profile__stats-container {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5vw;
+    }
+
+    .profile__count {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .profile__stat {
+        color: #a8a8a8;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .profile__counts {
+        justify-content: left;
     }
 }
