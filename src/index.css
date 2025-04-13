@@ -66,6 +66,7 @@ body {
 .profile {
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
     font-weight: 550;
     display: flex;
     flex-direction: column;
@@ -128,7 +129,8 @@ body {
 }
 
 .bio {
-    padding: 0px 10px;
+    padding: 0;
+    margin: 0 2vw;
 }
 
 .bio__text {
@@ -162,6 +164,7 @@ body {
 }
 
 .profile__actions {
+    margin-top: 5px;
     padding: 5px 10px;
     gap: calc(10% * 100vh);
     display: flex;
@@ -180,6 +183,7 @@ body {
 
 .profile__button {
     text-decoration: none;
+    padding: 13px;
     color: #f5f5f5;
     font-size: 3ev;
     background-color: #363636;
@@ -209,12 +213,11 @@ body {
 
 .highlights__list {
     display: flex;
-    gap: 4vw;
-    padding: 0;
+    gap: 3vw;
+    padding: 0 2vw;
     list-style-type: none;
     flex-wrap: nowrap; /* Prevent wrapping */
     width: max-content; /* Allow list to expand */
-    min-width: 100vw;
 }
 
 .highlights__list-item {
@@ -274,10 +277,18 @@ body {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 5px 0 0;
+}
+
+.gallery {
 }
 
 .gallery__tabs {
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
     font-weight: 600;
+    height: 44px;
     color: #a8a8a8;
     display: flex;
     justify-content: space-evenly;
@@ -287,7 +298,20 @@ body {
 .gallery__tab-link {
     color: #a8a8a8;
     width: 100%;
+    height: 100%;
+    display: flex;
     text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery__tab-link--is-active {
+    color: #f5f5f5;
+}
+
+.gallery__tab-title--desktop-only {
+    display: none;
 }
 
 .gallery__grid {
@@ -295,7 +319,7 @@ body {
     justify-content: space-between;
     justify-items: stretch;
     align-items: center;
-    padding: 0 0 48px 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -365,7 +389,8 @@ body {
 
 @media (min-width: 768px) {
     body {
-        padding-top: 20px;
+        padding: 20px 0 0 0;
+        font-size: 16px;
     }
 
     .header {
@@ -373,7 +398,53 @@ body {
     }
 
     .profile {
+        margin-left: 72px;
+    }
+
+    .profile__picture-container {
+        height: 150px;
+        width: 150px;
+    }
+
+    .profile__info {
+        font-size:;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+
+    .highlights__caption-text {
+        padding: 10px 0 0;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .highlights__list {
+        gap: 6vw;
+    }
+
+    .highlights__image-container {
+        height: 77px;
+        width: 77px;
+    }
+
+    .gallery {
         padding: 0 0 0 72px;
+    }
+
+    .gallery__tab-icon {
+        height: 0.75rem;
+        width: 0.75rem;
+    }
+
+    .gallery__tab-title--desktop-only {
+        display: flex;
+        padding-left: 6px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
     }
 
     .footer {
